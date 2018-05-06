@@ -127,9 +127,9 @@ def main():
     game_info += '  <game>\n'
     game_info += '    <name>%s</name>\n' % new_name
     game_info += '    <path>%s</path>\n' % path.text
-    if image:
+    if image is not None:
       game_info += '    <image>%s</image>\n' % image.text
-    if video:
+    if video is not None:
       game_info += '    <video>%s</video>\n' % video.text
     game_info += '    <desc>%s (Stan 专版)</desc>\n' % n
     game_info += '  </game>\n'
