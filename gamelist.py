@@ -95,7 +95,7 @@ def main():
     name = child.find('name')
     image = child.find('image')
     video = child.find('video')
-    if '淘宝奸商' in path.text:
+    if '淘宝奸商' in path.text or (image is not None and '淘宝奸商' in image.text):
       cur = os.getcwd()
       postfix = path.text.split('.')[-1]
       new_path = './%s.%s' % (name.text, postfix)
